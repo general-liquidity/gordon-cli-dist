@@ -1,19 +1,21 @@
 # Homebrew formula for Gordon CLI
 # The Frontier Trading Agent
 #
-# Install: brew tap general-liquidity/tap && brew install gordon
+# Install:
+#   brew tap general-liquidity/gordon-cli-dist https://github.com/general-liquidity/gordon-cli-dist
+#   brew install general-liquidity/gordon-cli-dist/gordon
 # SHA256 hashes are updated automatically by CI on each release.
 
 class Gordon < Formula
   desc "The Frontier Trading Agent - AI-powered crypto trading CLI"
   homepage "https://gordoncli.com"
-  version "0.8.21"
+  version "0.8.22"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/general-liquidity/gordon-cli-dist/releases/download/v#{version}/gordon-darwin-arm64"
-      sha256 "15d89f09f774b02ff6da53e05a1f768bdf582a2376d440bf0eb5653825902d4c"
+      sha256 "e63af97ce3f2ee1749d9315c79feaab7800f770980bfee3b96b174e7818cd247"
     else
       url "https://github.com/general-liquidity/gordon-cli-dist/releases/download/v#{version}/gordon-darwin-x64"
       sha256 "5919dea7824708267e4c01cb7f19201594d427a7c04bfdf67bdb6644df4c3e6f_DARWIN_X64"
